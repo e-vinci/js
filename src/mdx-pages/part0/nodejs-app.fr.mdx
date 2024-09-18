@@ -390,7 +390,7 @@ Veuillez configurer le script de démarrage de votre application en ajoutant cet
 
 ```json highlighting="2"
   "scripts": {
-    "start": "node index.js",
+    "start": "ts-node index.ts",
     //...
   }
 ```
@@ -404,7 +404,7 @@ A ce stade-ci, voilà à quoi devrait ressembler votre **`package.json`** :
   "name": "express-static-file-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
