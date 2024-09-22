@@ -378,6 +378,25 @@ GET counter : 2
 Le code de votre application doit se trouver dans votre repository local et votre web repository (normalement appelé **`web2`**) dans le répertoire nommé **`/exercises/1.2`**.  
 Veuillez faire un **`commit`** de votre code avec le message suivant : **`1.2 : app middleware`**.
 
+### 🤝 Tips
+La commande 'rsync' permet de copier la solution de votre Exercice 1.1 dans un nouveau répertoire tout en omettant les fichiers mentionnés dans votre **`/.gitignore`**, tel que **`/node_modules/`**. 
+En effet, il est déconseillé de copier-coller ces fichiers, qui peuvent être très volumineux.
+```bash
+mkdir exercices/1.2/
+rsync -av --exclude-from='exercices/1.1/basic-ts-api-boilerplate/.gitignore' exercices/1.1/basic-ts-api-boilerplate/ exercices/1.2/
+```
+
+Pour installer rsync sur Ubuntu ou Debian : 
+```bash
+sudo apt install rsync
+```
+
+Pour installer rsync sur Windows : 
+https://www.jbnet.fr/systeme/windows/windows-installer-rsync-avec-git-bash.html
+https://repo.msys2.org/msys/x86_64/
+Téléchargez les dernières versions de **`libxxhash-0.8.1-1-x86_64.pkg.tar.zst`** et **`rsync-3.3.0-1-x86_64.pkg.tar.zst`**.
+Décompressez les, copiez les fichiers **`rsync.exe`** et **`msys-xxhash-0.dll`** des répertoires **`usr\bin`** de leur archive respective, et collez les vers le répertoire **`C:\Program Files\Git\mingw64\bin`** .
+
 #### 🤝 Tips
 - Comment récupérer la méthode HTTP ? **`req.method`** ...
 - Comment appliquer un middleware à toutes les routes ? revoir les **application-level middleware**...
